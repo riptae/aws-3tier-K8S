@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service # ALB가 찾을 서비스
+  namespace: todo
+spec:
+  type: ClusterIP # ALB가 찾을 내부 접속점
+  selector: {app: web}
+  ports:
+    - port: 80 # ALB가 이 서비스로 들어오는 포트
+      targetPort: 80 # Web Pod로 보내는 포트

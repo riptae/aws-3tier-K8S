@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service # Web Pod (nginx) 가 사용할 고정 서비스 이름
+  namespace: todo
+spec:
+  type: ClusterIP # 클러스터 내부용 접속점
+  selector: {app: app} # 같은 Namespace에서 -> 이 라벨의 Pod를 송신 타겟으로 선택
+  ports:
+    - port: 8080 # Web Pod (nginx)의 Service 접속 포트
+      targetPort: 8080 # App Pod로 전송할 포트

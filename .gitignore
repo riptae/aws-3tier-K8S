@@ -1,0 +1,37 @@
+# Terraform working directories, state, and plans
+**/.terraform/
+**/terraform.tfstate*
+*.tfplan
+
+# Local Terraform variable files (keep *.tfvars.example)
+*.tfvars
+*.tfvars.json
+*.auto.tfvars.json
+
+# Local environment files (keep examples)
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+
+# Local AWS credentials and private keys
+.aws/
+*.pem
+*.key
+
+# Build and generated deployment files
+**/target/
+/.rendered/
+
+# Execution and crash logs
+*.log
+crash.log
+crash.*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Local root README
+/README.md
